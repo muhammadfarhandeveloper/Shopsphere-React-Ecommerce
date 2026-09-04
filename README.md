@@ -1,16 +1,50 @@
-# React + Vite
+# ShopSphere E-Commerce 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web application built with React.js and Fake Store API.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing
+- Product details
+- Product search
+- Category filtering
+- Product sorting
+- Shopping cart
+- Quantity management
+- LocalStorage cart persistence
+- Fake user registration
+- Fake login/logout
+- Protected routes
+- Checkout flow
+- Order history
+- Responsive design
+- Loading and error states
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- Vite
+- React Router
+- Axios
+- Context API
+- Tailwind CSS
+- Fake Store API
+- LocalStorage
 
-## Expanding the ESLint configuration
+##  Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Clone the repository
+
+git clone https://github.com/muhammadfarhandeveloper/Shopsphere-React-Ecommerce
+
+### Install dependencies
+
+npm install
+
+### Start development server
+
+npm run dev
+
+## Disclaimer
+
+This project uses the Fake Store API and client-side fake authentication for demonstration and educational purposes. It does not implement real payment processing or secure backend authentication.
