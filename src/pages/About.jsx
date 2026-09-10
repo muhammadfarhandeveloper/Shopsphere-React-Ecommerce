@@ -1,7 +1,7 @@
 import Footer from "../components/common/Footer"
 import Navbar from "../components/common/Navbar";
 import {ArrowDown,  Heart, Leaf, Sparkles, Target } from 'lucide-react';
-import AboutImage from '.././assets/images/Banner.avif';
+import AboutImage from '../assets/images/Banner.avif';
 
 function About() {
   return (
