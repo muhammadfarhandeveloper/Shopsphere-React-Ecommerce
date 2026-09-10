@@ -33,7 +33,7 @@ A modern e-commerce web application built with React.js and Fake Store API.
 
 ##  Getting Started
 
-### Live Visit
+### Website Live
 
 https://shopsphere-react-ecommerce-zeta.vercel.app
 
