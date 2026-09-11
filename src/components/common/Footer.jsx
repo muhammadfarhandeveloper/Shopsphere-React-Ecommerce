@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import {FaFacebook,FaInstagram,FaTwitter,FaYoutube} from 'react-icons/fa6';
+import {FaGithub,FaInstagram,FaTwitter,FaYoutube} from 'react-icons/fa6';
 
 function Footer() {
   return (
@@ -46,7 +46,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <a href="/" className="text-2xl font-bold tracking-tight">
-              YOURSTORE<span className="text-gray-500">.</span>
+              ShopSphere<span className="text-gray-500">.</span>
             </a>
 
             <p className="mt-5 max-w-xs text-sm leading-6 text-gray-400">
@@ -57,15 +57,15 @@ function Footer() {
             {/* Social */}
             <div className="mt-6 flex gap-3">
               <a
-                href="#"
-                aria-label="Facebook"
+                href="https://github.com/muhammadfarhandeveloper" target="_blank"
+                aria-label="Github"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition hover:bg-white hover:text-gray-900"
               >
-                <FaFacebook className="h-4 w-4" />
+                <FaGithub className="h-4 w-4" />
               </a>
 
               <a
-                href="https://www.instagram.com/theProviders.Official" target="_blank"
+                href="https://www.instagram.com/mfarhan.developer" target="_blank"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition hover:bg-white hover:text-gray-900"
               >
@@ -73,7 +73,7 @@ function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://youtube.com/@theProvidersOfficial" target="_blank"
                 aria-label="Twitter"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition hover:bg-white hover:text-gray-900"
               >
