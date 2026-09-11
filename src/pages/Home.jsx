@@ -3,23 +3,45 @@ import Navbar from '../components/common/Navbar'
 import Hero from '../components/common/Hero'
 import Footer from '../components/common/Footer'
 import ShopByCategory from '../components/products/ShopByCategory'
-import { getAllCategory } from '../services/productService'
+import FeaturedProducts from '../components/products/FeaturedProducts'
+import NewArrivalsProducts from '../components/products/NewArrivalsProducts'
+import { getAllCategory, getAllFeaturedProducts, getAllNewProducts } from '../services/productService'
+import HomeProductsSkeleton from '../components/skeleton/HomeProductsSkeleton'
 
 function Home() {
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const [categories, setCategories] = useState([]);
+    const [featuredProducts, setFeaturedProducts] = useState([]);
+    const [newProducts, setNewProducts] = useState([]);
 
-    const fetchAllCategory = async () => {
+    const fetchAllHomeData = async () => {
+        try {
+            setLoading(true);
 
-        let data = await getAllCategory();
+            const [categoriesData, featuredData, newProductsData] = await Promise.all([
+                getAllCategory(),
+                getAllFeaturedProducts(),
+                getAllNewProducts()
+            ]);
 
-        setCategories(data);
+            setCategories(categoriesData);
+            setFeaturedProducts(featuredData);
+            setNewProducts(newProductsData);
+
+        } catch (error) {
+            console.error(error);
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
 
     }
 
     useEffect(() => {
 
-        fetchAllCategory();
+        fetchAllHomeData();
 
     }, []);
 
@@ -27,10 +49,9 @@ function Home() {
         <>
             <Navbar />
             <Hero />
-
             <ShopByCategory categories={categories} />
-           
-
+            {loading ? <HomeProductsSkeleton /> : <FeaturedProducts featuredProducts={featuredProducts} />}
+            {loading ? <HomeProductsSkeleton /> : <NewArrivalsProducts newProducts={newProducts} />}
             <Footer />
         </>
     )
